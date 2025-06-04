@@ -1,0 +1,32 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "9b353e9ce24bdd2c71d6ea8a90d21ecf"
+application_url = "https://apart-ins-surgical-jesse.trycloudflare.com"
+embedded = true
+name = "Mattress Dynasity"
+handle = "lean-policy-app-3"
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "https-quickstart-0cb4d6bf.myshopify.com"
+include_config_on_deploy = true
+
+[webhooks]
+api_version = "2024-10"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_customers,read_inventory,read_orders,read_products,write_customers,write_inventory,write_orders,write_products"
+
+[auth]
+redirect_urls = [
+  "https://apart-ins-surgical-jesse.trycloudflare.com/auth/callback",
+  "https://apart-ins-surgical-jesse.trycloudflare.com/auth/shopify/callback",
+  "https://apart-ins-surgical-jesse.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = true
+
+[app_preferences]
+url = "https://d1db-2400-adc7-15b-c000-85da-a75b-5c75-dcd7.ngrok-free.app/"

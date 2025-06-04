@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "ff48434bd20c604651045a3a839580c0"
+name = "inventory-app-local"
+handle = "inventory-app-local"
+application_url = "https://due-things-sandy-coleman.trycloudflare.com"
+embedded = true
+
+[webhooks]
+api_version = "2024-10"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_customers,read_inventory,read_orders,read_products,write_customers,write_inventory,write_orders,write_products"
+
+[auth]
+redirect_urls = [
+  "https://due-things-sandy-coleman.trycloudflare.com/auth/callback",
+  "https://due-things-sandy-coleman.trycloudflare.com/auth/shopify/callback",
+  "https://due-things-sandy-coleman.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true

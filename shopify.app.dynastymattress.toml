@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "5c47a736f37b9674de72d310b3cec0d5"
+name = "DynastyMattress"
+handle = "inventory-handler-1"
+application_url = "https://subject-viewed-rose-sciences.trycloudflare.com"
+embedded = true
+
+[webhooks]
+api_version = "2025-04"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_all_orders,read_customers,read_inventory,read_orders,read_products,write_customers,write_inventory,write_orders,write_products"
+
+[auth]
+redirect_urls = [
+  "https://subject-viewed-rose-sciences.trycloudflare.com/auth/callback",
+  "https://subject-viewed-rose-sciences.trycloudflare.com/auth/shopify/callback",
+  "https://subject-viewed-rose-sciences.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
