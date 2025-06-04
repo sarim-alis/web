@@ -1,0 +1,24 @@
+.Daily-sync-main-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.specify-categories {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.specify-categories-1 {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#specify-1 { background: #e3f2fd; color: #1976d2; }
+#specify-2 { background: #e8f5e9; color: #2e7d32; }
+#specify-3 { background: #fff3e0; color: #f57c00; }
