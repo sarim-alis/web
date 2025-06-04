@@ -117,7 +117,7 @@ fill: white;
 }
 .content-section{
     flex-grow: 1;
-    max-width: 75%;
+    max-width: 90%;
     width: 100%;
 }
 .sidebar.collapsed .sidebar-logo-inner{
