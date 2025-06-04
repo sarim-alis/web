@@ -3,7 +3,7 @@
 client_id = "5c47a736f37b9674de72d310b3cec0d5"
 name = "DynastyMattress"
 handle = "inventory-handler-1"
-application_url = "https://subject-viewed-rose-sciences.trycloudflare.com"
+application_url = "https://arrange-exceed-regression-bound.trycloudflare.com"
 embedded = true
 
 [webhooks]
@@ -15,9 +15,9 @@ scopes = "read_all_orders,read_customers,read_inventory,read_orders,read_product
 
 [auth]
 redirect_urls = [
-  "https://subject-viewed-rose-sciences.trycloudflare.com/auth/callback",
-  "https://subject-viewed-rose-sciences.trycloudflare.com/auth/shopify/callback",
-  "https://subject-viewed-rose-sciences.trycloudflare.com/api/auth/callback"
+  "https://arrange-exceed-regression-bound.trycloudflare.com/auth/callback",
+  "https://arrange-exceed-regression-bound.trycloudflare.com/auth/shopify/callback",
+  "https://arrange-exceed-regression-bound.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]
