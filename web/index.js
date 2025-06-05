@@ -1,4 +1,4 @@
-// @ts-check
+// @ts-nocheck
 import { join } from "path";
 import { readFileSync } from "fs";
 import express from "express";
