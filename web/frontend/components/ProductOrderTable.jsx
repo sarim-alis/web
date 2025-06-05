@@ -303,7 +303,7 @@ export function ProductOrderTable() {
   return (
     <Layout>
       <Layout.Section fullWidth>
-        <Card title="Product Orders saras">
+        <Card title="Product Orders">
           <Card.Section>
             <div style={{ marginBottom: '16px' }}>
               <Button onClick={() => setShowFilters(!showFilters)} primary>
