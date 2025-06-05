@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import {
   SettingsIcon
@@ -29,13 +29,30 @@ import Collapsedlogo from '/assets/collapsed-logo.png';
 
 
 export function Navigationbar() {
+  const getInitialCollapseState = () => {
+    return window.innerWidth < 1300;
+  };
+
   // State to track whether the sidebar is collapsed or not
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(getInitialCollapseState);
 
   // Function to toggle the sidebar collapse state
   const toggleSidebar = () => {
     setIsCollapsed(prevState => !prevState);
   };
+
+  // Handle window resize.
+  useEffect(() => {
+    const handleResize = () => {
+      const shouldCollapse = window.innerWidth < 1300;
+      setIsCollapsed(shouldCollapse);
+    };
+      window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>
