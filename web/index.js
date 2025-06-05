@@ -416,47 +416,47 @@ app.get("/api/products/all", async (_req, res) => {
 
 
 
-// app.get("/api/orders/all", async (req, res) => {
-//   try {
-//     const session = res.locals.shopify.session;
-//     if (!session) {
-//       return res.status(400).json({ error: "No valid Shopify session found." });
-//     }
+app.get("/api/orders/all", async (req, res) => {
+  try {
+    const session = res.locals.shopify.session;
+    if (!session) {
+      return res.status(400).json({ error: "No valid Shopify session found." });
+    }
 
-//     const { accessToken, shop } = session;
-//     const apiVersion = "2024-10";
-//     const productId = req.query.product_id;
+    const { accessToken, shop } = session;
+    const apiVersion = "2024-10";
+    const productId = req.query.product_id;
 
-//     let url = `https://${shop}/admin/api/${apiVersion}/orders.json?status=any&limit=250`;
-//     if (productId) {
-//       url += `&product_id=${productId}`;
-//     }
+    let url = `https://${shop}/admin/api/${apiVersion}/orders.json?status=any&limit=250`;
+    if (productId) {
+      url += `&product_id=${productId}`;
+    }
 
-//     const ordersRes = await fetch(url, {
-//       headers: { 
-//         "X-Shopify-Access-Token": accessToken,
-//         "Content-Type": "application/json"
-//       }
-//     });
+    const ordersRes = await fetch(url, {
+      headers: { 
+        "X-Shopify-Access-Token": accessToken,
+        "Content-Type": "application/json"
+      }
+    });
 
-//     if (!ordersRes.ok) {
-//       throw new Error("Failed to fetch orders");
-//     }
+    if (!ordersRes.ok) {
+      throw new Error("Failed to fetch orders");
+    }
 
-//     const { orders } = await ordersRes.json();
+    const { orders } = await ordersRes.json();
 
-//     const filteredOrders = productId
-//       ? orders.filter(order => 
-//           order.line_items.some(item => item.product_id.toString() === productId)
-//         )
-//       : orders;
+    const filteredOrders = productId
+      ? orders.filter(order => 
+          order.line_items.some(item => item.product_id.toString() === productId)
+        )
+      : orders;
 
-//     return res.status(200).json(filteredOrders);
-//   } catch (err) {
-//     console.error("Error in /api/orders/all:", err);
-//     return res.status(500).json({ error: err.message });
-//   }
-// });
+    return res.status(200).json(filteredOrders);
+  } catch (err) {
+    console.error("Error in /api/orders/all:", err);
+    return res.status(500).json({ error: err.message });
+  }
+});
 
 
 // app.get("/api/orders/all", async (req, res) => {
