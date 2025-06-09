@@ -3,7 +3,7 @@
 client_id = "5c47a736f37b9674de72d310b3cec0d5"
 name = "DynastyMattress"
 handle = "inventory-handler-1"
-application_url = "https://package-offered-fg-lodge.trycloudflare.com"
+application_url = "https://knitting-ash-pg-soma.trycloudflare.com"
 embedded = true
 
 [webhooks]
@@ -15,9 +15,9 @@ scopes = "read_all_orders,read_customers,read_inventory,read_orders,read_product
 
 [auth]
 redirect_urls = [
-  "https://package-offered-fg-lodge.trycloudflare.com/auth/callback",
-  "https://package-offered-fg-lodge.trycloudflare.com/auth/shopify/callback",
-  "https://package-offered-fg-lodge.trycloudflare.com/api/auth/callback"
+  "https://knitting-ash-pg-soma.trycloudflare.com/auth/callback",
+  "https://knitting-ash-pg-soma.trycloudflare.com/auth/shopify/callback",
+  "https://knitting-ash-pg-soma.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]
